@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output, input } from '@angular/core';
 
 @Component({
     selector: 'app-crew-designations',
@@ -7,8 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
     styleUrl: './crew-designations.component.scss'
 })
 export class CrewDesignationsComponent {
-  @Input()
-  message: string = '';
+  readonly message = input<string>('');
 
   @Output()
   messageEvent: EventEmitter<string> = new EventEmitter<string>();
